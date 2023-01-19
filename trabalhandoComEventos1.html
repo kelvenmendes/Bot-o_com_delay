@@ -1,0 +1,33 @@
+<!-- botão com delay no click--> 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- onclick="navegarEm5(event) " -->
+        <a href="https://google.com.br" >Google</a> 
+    </div>
+    <script>
+        function navegarEm5s (e){
+            e.preventDefault()
+            console.log('saindo em 5 segundos...')
+            setTimeout(() =>{
+                const link = e.target
+                window.location.href = link.heref;
+            }, 5000)
+        }
+
+
+        //outra forma de fazer a chamada da função onclick:
+
+        const a = document.querySelector('a')
+        a.onclick = navegarEm5s
+    </script>
+</body>
